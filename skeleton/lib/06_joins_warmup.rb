@@ -129,8 +129,9 @@ def alien_cast
   SELECT
     name
   FROM
-    actors JOIN castings ON id = actor_id
-    JOIN movies ON movie_id = movies.id
+    actors
+  JOIN castings ON id = actor_id
+  JOIN movies ON movie_id = movies.id
   WHERE
     title = 'Alien'
   SQL
